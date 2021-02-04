@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:dataGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+    ios:Page.UseSafeArea="true"
+    xmlns:local="clr-namespace:JimuApuri.ViewModels"
+    x:Class="JimuApuri.Views.Cardio.Walk"
+    >
+
+    <!--This is a subpage of the logbook page showing data recorded by the user of a certain workout-->
+
+    <!--//======================================
+        //Reference P7: personal assistance
+        //Purpose: Could not get the binding to fix the page
+        //Date: 18/10/2019
+        //Source: online chat with Balasubramani Sundaram
+        //Assistence: showed me how to properly write the location out
+        //======================================-->
+    <!--Binds the MainViewModel files to this page for refencing-->
+    <ContentPage.BindingContext>
+        <x:Binding Source="{x:Static local:LogbookMainMenuViewModel._ViewModel}"/>
+    </ContentPage.BindingContext>
+    <!--//======================================
+        //End reference P7
+        //======================================-->
+
+    <!--Page Layout-->
+    <StackLayout>
+        <!--Title of page-->
+        <Label Text="Walking" 
+            Grid.Column="1"
+            FontSize="30"
+            TextColor="#0077be"
+            HorizontalOptions="CenterAndExpand"/>
+        <!--Line to seperate content of page-->
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="2" Color="#0077be"/>
+
+        <!--creating and declearing the rules of the datagrid-->
+        <dataGrid:SfDataGrid
+            ItemsSource="{Binding data}"
+            NavigationMode="Cell"
+            SelectionMode="Single"
+            AutoGenerateColumns="False"
+            ColumnSizer="Star"
+            AllowEditing="True"
+            x:Name="dataGrid">
+
+            
+            <!--selecting what columns to show-->
+            <dataGrid:SfDataGrid.Columns>
+                <dataGrid:GridTextColumn MappingName="Day" HeaderText="Day" AllowEditing="False"/>
+                <dataGrid:GridTextColumn MappingName="WalkMinutes" HeaderText="Minutes"/>
+                <dataGrid:GridTextColumn MappingName="WalkDistance" HeaderText="Distance in Kilometres"/>
+            </dataGrid:SfDataGrid.Columns>
+            
+        </dataGrid:SfDataGrid>
+    </StackLayout>
+
+</ContentPage>

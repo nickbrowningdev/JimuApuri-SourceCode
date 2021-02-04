@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="JimuApuri.Views.WorkoutPlanner">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <!-- sets background as white -->
+            <StackLayout Padding="5" BackgroundColor="White">
+                <Button Text="Add Exercise" HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#0077be" 
+                        TextColor="White"
+                        Clicked="AddExercise"
+                        />
+                      
+                <!-- list of exercises -->
+                <ListView x:Name="WorkoutPlanList" HasUnevenRows="True" ItemTapped="EditExercise" BackgroundColor="White">
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <!-- binds exercises -->
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Delete Exercise" Clicked="DeleteExercise" IsDestructive="True" CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+
+                                <StackLayout Spacing="3" BackgroundColor="White">
+                                    <Label Text="{Binding Name, StringFormat='Name:{0:F0}'}" FontSize="Large" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

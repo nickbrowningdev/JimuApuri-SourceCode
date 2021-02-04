@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="JimuApuri.Views.HomePageView">
+    <NavigationPage.TitleView>
+    <!-- Title Bar Design-->
+        <Image Source="title"
+               HeightRequest="50"
+               WidthRequest="50"/>
+        <!--<Label Text="Jimuapuri" 
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               FontSize="35"
+               BackgroundColor="#0077be"
+               FontFamily="RobotoCondensed-Bold.ttf#RobotoCondensed-Bold" />-->
+        <!-- Font Used: https://www.fontsquirrel.com/fonts/download/roboto -->
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+    <!-- Main Menu Design -->
+        <StackLayout Padding="20" Spacing="10">
+            <Image Source="logo"
+                   HeightRequest="250"
+                   WidthRequest="250"/>
+
+                <!-- search workout button -->
+            <Button Text="Search Workout"
+                    Clicked="Button1_Clicked"
+                    BackgroundColor="White"
+                    FontSize="20"
+                    />
+
+                <!-- workout-planner button -->
+            <Button Text="My Workout Plan"
+                    Clicked="Button2_Clicked"
+                    BackgroundColor="White"
+                    FontSize="20"
+                    />
+                
+                <!-- stopwatch button -->
+            <Button Text="Stopwatch"
+                    Clicked="Button3_Clicked"
+                    BackgroundColor="White"
+                    FontSize="20"
+                    />
+
+                <!-- logbook button -->
+            <Button Text="Logbook"
+                    Clicked="Button4_Clicked"
+                    BackgroundColor="White"
+                    FontSize="20"
+                    />
+
+                <!-- gps/map button -->
+            <Button Text="Find World Gym Maitland"
+                    Clicked="Button5_Clicked"
+                    BackgroundColor="White"
+                    FontSize="20"
+                    />
+
+           
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true" 
+    mc:Ignorable="d"
+    x:Class="JimuApuri.Views.LogbookMainMenuView">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--Page title-->
+                <Label Text="Logbooks" 
+                Grid.Column="1"
+                FontSize="35"
+                TextColor="#0077be"
+                HorizontalOptions="CenterAndExpand"/>
+        
+                <!--Seperation line-->
+            <BoxView
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="2"
+                Color="#0077be"/>
+                
+                <!--Sub Title for Standard-->
+                <Label Text="Standard" 
+                Grid.Column="1"
+                FontSize="30"
+                Margin="35, 0"
+                TextColor="Gray"/>
+                
+                <!--Seperation line-->
+            <BoxView HorizontalOptions="FillAndExpand"
+                HeightRequest="2"
+                Color="LightGray"/>
+
+            <!--Buttons for all of Standards categories-->
+            <Button x:Name="BBPPage"
+                Text="Barbell Bench Presses" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="BBPButtonClicked"/>
+                
+            <Button x:Name="BDPage"
+                Text="Barbell Deadlifts" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="BDButtonClicked"/>
+                
+            <Button x:Name="BSPage"
+                Text="Barbell Squats" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="BSButtonClicked"/>
+                
+            <Button x:Name="BCPage"
+                Text="Bicep Curls" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="BCButtonClicked"/>
+                
+            <Button x:Name="BWCPage"
+                Text="Bodyweight Crunches" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="BWCButtonClicked"/>
+                
+            <Button x:Name="TEPage"
+                Text="Tricep Extensions" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="TEButtonClicked"/>
+                
+            <Button x:Name="WPPage"
+                Text="Wide Pushups" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="WPButtonClicked"/>
+
+            <!--Sub Title for Cardio-->
+            <Label Text="Cardio" 
+                Grid.Column="1"
+                FontSize="30"
+                Margin="35, 0"
+                TextColor="Gray"/>
+                
+            <!--Seperation line-->
+            <BoxView HorizontalOptions="FillAndExpand"
+                HeightRequest="2"
+                Color="LightGray"/>
+
+            <!--Buttons for all of Cardio categories-->
+            <Button x:Name="RunPage"
+                Text="Running" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="RunButtonClicked"/>
+                
+            <Button x:Name="WalkPage"
+                Text="Walking" 
+                FontSize="20"
+                TextColor="DarkGray"
+                BackgroundColor="Transparent"
+                Clicked="WalkButtonClicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+</ContentPage>

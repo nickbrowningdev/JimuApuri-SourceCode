@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JimuApuri.Views.AddExerciseView">
+
+    <ContentPage.Content >
+        <ScrollView>
+            <!-- set background to white -->
+            <StackLayout Padding="5" BackgroundColor="White">
+
+                <!-- enter exercise name -->
+                <Label Text="Name" FontAttributes="Bold" TextColor="Black"/>
+                <Entry Placeholder="Name" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="name"/>
+
+                <!-- save button -->
+                <Button Text="Save" Clicked="SaveExercise" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#0077be" 
+                        TextColor="White" x:Name="saveBtn"
+                        />
+
+                <!-- delete button -->
+                <Button Text="Delete" Clicked="DeleteExerciseAlt" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#0077be" 
+                        TextColor="White" x:Name="deleteBtn"
+                        />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
